@@ -1,0 +1,39 @@
+package com.example.mapper;
+
+
+import com.example.entity.Information;
+
+import java.util.List;
+
+/**
+ * 操作Activity相关数据接口
+*/
+public interface InformationMapper {
+
+    /**
+     * 新增
+     */
+    int insert(Information information);
+
+    /**
+     * 删除
+     */
+    int deleteById(Integer id);
+    //连带删除
+    int deleteBydepartmentId(Integer departmentId);
+    /**
+     * 修改
+     */
+    int updateById(Information information);
+
+    /**
+     * 根据ID查询
+     */
+    Information selectById(Integer id);
+
+    /**
+     * 查询所有
+     */
+    List<Information> selectAll(Information information);
+
+}
